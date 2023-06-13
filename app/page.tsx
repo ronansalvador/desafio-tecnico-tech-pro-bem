@@ -17,7 +17,7 @@ export default async function Home() {
   }
   const jsonNews = JSON.stringify(news);
 
-  fs.writeFile('./pages/api/arquivo.json', jsonNews, 'utf8', (err) => {
+  fs.writeFile('./pages/api/news.json', jsonNews, 'utf8', (err) => {
     if (err) {
       console.error(err);
     } else {
