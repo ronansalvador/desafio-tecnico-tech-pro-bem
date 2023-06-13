@@ -9,6 +9,7 @@ function Card({ noticia }: CardProps) {
     <>
       <div className='card'>
         <p className='card-title'>Titulo: {noticia.title}</p>
+        <p>{noticia.id}</p>
         {noticia.author && (
           <p className='card-author'>Author:{noticia.author}</p>
         )}

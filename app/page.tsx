@@ -1,5 +1,6 @@
 import Card from './components/Card';
 import styles from './page.module.css';
+import fs from 'fs';
 
 import { Article } from './interface';
 
@@ -10,6 +11,20 @@ export default async function Home() {
 
   const data = await response.json();
   const news: Article[] = data.articles;
+
+  for (var index in news) {
+    news[index].id = Number(index) + 1; // Adiciona a chave "id" em cada objeto com o valor do índice
+  }
+  const jsonNews = JSON.stringify(news);
+
+  fs.writeFile('./pages/api/arquivo.json', jsonNews, 'utf8', (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.error('sucesso');
+    }
+  });
+
   return (
     <main className={styles.main}>
       <h1>Desafio Técnico Tech Pro Bem</h1>
