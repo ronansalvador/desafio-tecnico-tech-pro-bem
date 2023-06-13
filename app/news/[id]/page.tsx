@@ -15,7 +15,7 @@ async function page({ params }: Props) {
 
   return (
     <>
-      <h1>{`Titulo: ${news.title}`}</h1>
+      <h1>{news.title}</h1>
       {news.urlToImage && (
         <Image
           src={news.urlToImage}
@@ -24,7 +24,11 @@ async function page({ params }: Props) {
           height={600}
         />
       )}
-      <h1>{`conteudo: ${news.content}`}</h1>
+      <p>{news.content}</p>
+      {news.author && <p className='card-author'>{`Autor: ${news.author}`}</p>}
+      {news.publishedAt && (
+        <p>{`Data de publicação: ${news.publishedAt.slice(0, 10)}`}</p>
+      )}
     </>
   );
 }
