@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Article } from '../interface';
 
 interface CardProps {
@@ -7,13 +8,13 @@ interface CardProps {
 function Card({ noticia }: CardProps) {
   return (
     <>
-      <div className='card'>
+      <Link href={`/news/${noticia.id}`} className='card'>
         <p className='card-title'>Titulo: {noticia.title}</p>
         <p>{noticia.id}</p>
         {noticia.author && (
           <p className='card-author'>Author:{noticia.author}</p>
         )}
-      </div>
+      </Link>
     </>
   );
 }
