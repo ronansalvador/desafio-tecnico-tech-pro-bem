@@ -4,8 +4,10 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin: 10px 0;
-  background-color: #5c5b5b;
+  margin: 25px 0;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  /* background-color: #5c5b5b; */
 }
 
 .card p {

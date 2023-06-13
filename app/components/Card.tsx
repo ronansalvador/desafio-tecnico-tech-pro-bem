@@ -23,7 +23,7 @@ function Card({ noticia }: CardProps) {
         <p>{noticia.description}</p>
 
         {noticia.author && (
-          <p className='card-author'>Author:{noticia.author}</p>
+          <p className='card-author'>Author: {noticia.author}</p>
         )}
         {noticia.publishedAt && <p>{noticia.publishedAt.slice(0, 10)}</p>}
       </Link>
