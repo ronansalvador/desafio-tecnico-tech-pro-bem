@@ -6,7 +6,7 @@ import { Article } from './interface';
 
 export default async function Home() {
   const response = await fetch(
-    'https://newsapi.org/v2/top-headlines?country=us&apiKey=13371130ed8048ffa7cb15d51d161f70',
+    'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=13371130ed8048ffa7cb15d51d161f70',
   );
 
   const data = await response.json();

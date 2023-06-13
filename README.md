@@ -4,7 +4,7 @@
 
 ## instale as depenencias do projeto
 ```bash
-npm run install
+npm install
 ```
 ## Renomeie o arquvio .env.local.example para .env.local
 
