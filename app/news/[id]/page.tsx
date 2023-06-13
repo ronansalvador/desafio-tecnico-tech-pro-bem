@@ -8,8 +8,9 @@ interface Props {
 }
 
 async function page({ params }: Props) {
+  const URL = process.env.NEXT_PUBLIC_URL_API;
   const { id } = params;
-  const response = await fetch(`http://localhost:3000/api/news/${id}`);
+  const response = await fetch(`${URL}/api/news/${id}`);
   const data = await response.json();
   const news: Article = data;
 
