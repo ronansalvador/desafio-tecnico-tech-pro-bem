@@ -6,3 +6,18 @@
   height: 100vh;
   gap: 25px;
 }
+
+.link-all-news {
+  background-color: #c19dff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.link-all-news:hover {
+  scale: 1.1;
+}

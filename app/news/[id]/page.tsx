@@ -18,7 +18,9 @@ async function page({ params }: Props) {
 
   return (
     <div className='page-datails-news'>
-      <Link href='/'>Show all news</Link>
+      <Link href='/' className='link-all-news'>
+        Ver todas as notícias
+      </Link>
       <h1>{news.title}</h1>
       {news.urlToImage && (
         <Image
@@ -33,6 +35,9 @@ async function page({ params }: Props) {
       {news.publishedAt && (
         <p>{`Data de publicação: ${news.publishedAt.slice(0, 10)}`}</p>
       )}
+      <Link className='link-all-news' href={news.url}>
+        Ver noticia completa
+      </Link>
     </div>
   );
 }

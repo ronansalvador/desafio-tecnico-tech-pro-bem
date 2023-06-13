@@ -28,7 +28,7 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <h1>Desafio Técnico Tech Pro Bem</h1>
-      <h1>Noticias</h1>
+      <h1>notícias</h1>
       <section className='news'>
         {news.map((noticia: Article, index) => (
           <Card key={noticia.id} noticia={noticia} />
